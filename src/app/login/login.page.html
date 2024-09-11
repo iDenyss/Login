@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="log-in-outline" class="login-icon"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="login-background">
+  <div class="login-container">
+    <div class="login-card-wrapper">
+      <ion-card class="login-card">
+        <ion-card-header>
+          <ion-card-title>Iniciar Sesión</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <img src="assets/icon/logo.png" alt="Logo" class="login-logo" />
+          <form (ngSubmit)="onLogin()">
+            <ion-item>
+              <ion-label position="floating">Correo Electrónico</ion-label>
+              <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Contraseña</ion-label>
+              <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+            </ion-item>
+            <ion-button expand="full" type="submit">Iniciar Sesión</ion-button>
+          </form>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
